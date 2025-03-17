@@ -67,6 +67,7 @@ variable "ec2_ami" {
     type = string
     default = "YOUR-EC2-AMI"
 }
+```
 
 ---
 
