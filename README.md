@@ -50,17 +50,23 @@ Terraform requires an **Amazon Machine Image (AMI) ID** for launching the EC2 in
 4. Under **Amazon Machine Image (AMI)**, find an image like **Amazon Linux 2**  
 5. Copy the **AMI ID** (e.g., `ami-0abcdef1234567890`)  
 
-### Set Your AMI ID in `variables.tf`  
+### Set Your AMI ID in `terraform.tfvars`  
 
-Open the `variables.tf` file and replace `"YOUR_EC2_AMI"` with your AMI ID:  
+Open the `terraform.tfvars` file and replace `"YOUR-EC2-AMI"` with your AMI ID:  
+
+```terraform
+ec2_ami = "YOUR-EC2-AMI"
+ec2_name = "TestEC2"
+```
+
+Additionally, you can set a default EC2 AMI ID in the `variables.tf` file here:
 
 ```terraform
 variable "ec2_ami" {
     description = "Value of the AMI ID for the EC2 Instance"
-    type        = string
-    default     = "YOUR-AMI-ID" # Replace with your AMI ID
+    type = string
+    default = "YOUR-EC2-AMI"
 }
-```
 
 ---
 

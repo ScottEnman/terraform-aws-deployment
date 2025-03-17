@@ -32,7 +32,7 @@ variable "igw_name" {
 variable "ec2_ami" {
     description = "Value of the AMI ID for the EC2 Instance"
     type = string
-    default = "YOUR-AMI-ID"
+    default = "YOUR-EC2-AMI"
 }
 
 variable "ec2_name" {
